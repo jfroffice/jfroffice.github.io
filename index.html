@@ -1,353 +1,535 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>jfroffice's résumé</title>
-  <meta name="viewport" content="width=device-width" />
-  <style>
-h1, h2, .date {
-    font: small-caps normal 100% Constantia, 'Palatino Linotype', Palatino, Georgia, serif;
-}
+  <head>
+    <meta charset="utf-8" />
+    <title>jfroffice's résumé</title>
+    <meta name="viewport" content="width=device-width" />
+    <style>
+      h1,
+      h2,
+      .date {
+        font: small-caps normal 100% Constantia, "Palatino Linotype", Palatino,
+          Georgia, serif;
+      }
 
-h1, 
-header > h1 > span,
-header > ul > li:before {
-    color: #0099cb;
-}
+      h1,
+      header > h1 > span,
+      header > ul > li:before {
+        color: #0099cb;
+      }
 
-* { margin:0; }
+      * {
+        margin: 0;
+      }
 
-html {
-	background: #9BA2B0;
-	font-size: 14px;
-}
+      html {
+        background: #9ba2b0;
+        font-size: 14px;
+      }
 
-body {
-	width: 45em;
-	padding: 7em 10%;
-	margin: 1em auto;
-	background: white;
-	box-shadow: 1px 1px 5px 2px rgba(0,0,0,.3);
-	font: 100%/1.5 'Segoe UI', Optima, 'Hiragino Kaku Gothic Pro', 'Apple Gothic', Tahoma, 'Helvetica Neue', sans-serif;
-	
-	-moz-hyphens: auto;
-	-ms-hyphens: auto;
-	-o-hyphens: auto;
-	-webkit-hyphens: auto;
-	hyphens: auto;
-	
-	-moz-transition: .5s font-size;
-	-ms-transition: .5s font-size;
-	-o-transition: .5s font-size;
-	-webkit-transition: .5s font-size;
-	transition: .5s font-size;
-}
+      body {
+        width: 45em;
+        padding: 7em 10%;
+        margin: 1em auto;
+        background: white;
+        box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.3);
+        font: 100%/1.5 "Segoe UI", Optima, "Hiragino Kaku Gothic Pro",
+          "Apple Gothic", Tahoma, "Helvetica Neue", sans-serif;
 
-h1 {
-	margin-top: 1.2em;
-	font-size: 180%;
-}
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        -o-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
 
-h2 {
-	margin-top: 1em;
-	font-size: 150%;
-}
+        -moz-transition: 0.5s font-size;
+        -ms-transition: 0.5s font-size;
+        -o-transition: 0.5s font-size;
+        -webkit-transition: 0.5s font-size;
+        transition: 0.5s font-size;
+      }
 
-a {
-	color:#035AA6 ;
-}
+      h1 {
+        margin-top: 1.2em;
+        font-size: 180%;
+      }
 
-abbr[title] {
-	border-bottom: 1px dotted #035AA6 ;
-	cursor: help;
-}
+      h2 {
+        margin-top: 1em;
+        font-size: 150%;
+      }
 
-p {
-	margin: .6em 0;
-}
+      a {
+        color: #035aa6;
+      }
 
-h1 + p {
-	margin-top: 0;
-}
+      abbr[title] {
+        border-bottom: 1px dotted #035aa6;
+        cursor: help;
+      }
 
-ul {
-	padding: 0;
-	list-style: square;
-}
+      p {
+        margin: 0.6em 0;
+      }
 
-header {
-	text-align: center;
-}
+      h1 + p {
+        margin-top: 0;
+      }
 
-	header > h1 {
-		color: #7F7F7F;
-		border-bottom: 1px solid #0099cb;
-		margin: 0 0 .15em;
-		text-indent: 1.2em;
-		font-size: 450%;
-		line-height: 1.05;
-		font-variant: normal;
-	}
-	
-		header > h1 > span {
-			display: inline-block;
-			margin-left: -2.7em;
-			vertical-align: super;
-			font-size: 50%;
-		}
-		
-	header > ul {
-		display: block;
-		margin-bottom: .5em;
-	}
-	
-		header > ul > li {
-			display: inline;
-			list-style: none;
-		}
-		
-		header > ul > li:before {
-			content: '● ';
-		}
-		
-		header > ul > li:first-child:before {
-			content: none;
-		}
-	
-	address {
-		font-style: normal;
-	}
-	
-ol.timeline {
-	padding: 0;
-	border: 0 solid #ddd;
-	border-width: 4px 0;
-}
+      ul {
+        padding: 0;
+        list-style: square;
+      }
 
-	ol.timeline > li {
-		list-style: none;
-		padding: .4em 0;
-		border: 1px solid white; /* Chrome printing bug */
-		border-top-color: #ccc;
-	}
-	
-	ol.timeline > li:first-child {
-		border-top: 0;
-	}
-	
-		ol.timeline > li > p {
-			margin: 0;
-		}
-		
-		ol.timeline > li > .date {
-			float: left;
-			margin-left: .1em;
-			max-width: 8rem;
-			color: gray;
-			font-size: 110%;
-		}
-	
-		ol.timeline > li > .date ~ p {
-			margin-left: 9rem;
-		}
-		
-.note {
-	margin-top: .4em;
-	font-size: 75%;
-}
+      header {
+        text-align: center;
+      }
 
-	.note a:not(:hover):not(:active) {
-		color: inherit;
-	}
+      header > h1 {
+        color: #7f7f7f;
+        border-bottom: 1px solid #0099cb;
+        margin: 0 0 0.15em;
+        text-indent: 1.2em;
+        font-size: 450%;
+        line-height: 1.05;
+        font-variant: normal;
+      }
 
-footer {
-	margin-top: 3em;
-	font-style: italic;
-}
+      header > h1 > span {
+        display: inline-block;
+        margin-left: -2.7em;
+        vertical-align: super;
+        font-size: 50%;
+      }
 
-.amp {
-	font-style: italic;
-}
+      header > ul {
+        display: block;
+        margin-bottom: 0.5em;
+      }
 
-@media (max-width:950px) {
-	html { font-size: 12px; }
-}
+      header > ul > li {
+        display: inline;
+        list-style: none;
+      }
 
-@media (max-width:700px) {
-	html { font-size: 11px; }
-}
+      header > ul > li:before {
+        content: "● ";
+      }
 
-@media (max-width:600px) {
-	body { width: auto; margin: 1em; }
-    
-    ol.timeline > li > .date ~ p { margin-left: 8rem; }
-}
+      header > ul > li:first-child:before {
+        content: none;
+      }
 
-@media print {
-	body {
-		box-shadow: none;	 
-	}
-	
-	header > h1 {
-		color: black;
-	}
-}
-  </style>
-</head>
-<body>
-<header>
-    <h1>jfroffice <span>CV</span></h1>
-    <ul>
+      address {
+        font-style: normal;
+      }
+
+      ol.timeline {
+        padding: 0;
+        border: 0 solid #ddd;
+        border-width: 4px 0;
+      }
+
+      ol.timeline > li {
+        list-style: none;
+        padding: 0.4em 0;
+        border: 1px solid white; /* Chrome printing bug */
+        border-top-color: #ccc;
+      }
+
+      ol.timeline > li:first-child {
+        border-top: 0;
+      }
+
+      ol.timeline > li > p {
+        margin: 0;
+      }
+
+      ol.timeline > li > .date {
+        float: left;
+        margin-left: 0.1em;
+        max-width: 8rem;
+        color: gray;
+        font-size: 110%;
+      }
+
+      ol.timeline > li > .date ~ p {
+        margin-left: 9rem;
+      }
+
+      .note {
+        margin-top: 0.4em;
+        font-size: 75%;
+      }
+
+      .note a:not(:hover):not(:active) {
+        color: inherit;
+      }
+
+      footer {
+        margin-top: 3em;
+        font-style: italic;
+      }
+
+      .amp {
+        font-style: italic;
+      }
+
+      @media (max-width: 950px) {
+        html {
+          font-size: 12px;
+        }
+      }
+
+      @media (max-width: 700px) {
+        html {
+          font-size: 11px;
+        }
+      }
+
+      @media (max-width: 600px) {
+        body {
+          width: auto;
+          margin: 1em;
+        }
+
+        ol.timeline > li > .date ~ p {
+          margin-left: 8rem;
+        }
+      }
+
+      @media print {
+        body {
+          box-shadow: none;
+        }
+
+        header > h1 {
+          color: black;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>jfroffice <span>CV</span></h1>
+      <ul>
         <li><a href="mailto:me@jfroffice.me">me@jfroffice.me</a></li>
-	<li><a href="http://twitter.com/jfroffice">@jfroffice</a></li>
-	<li><a href="https://github.com/jfroffice">Github</a></li>
+        <li><a href="http://twitter.com/jfroffice">@jfroffice</a></li>
+        <li><a href="https://github.com/jfroffice">Github</a></li>
         <li><a href="https://medium.com/@jfroffice">Medium</a></li>
-    </ul>
-    <address>Aix en Provence, France</address>
-</header>
-<section id="summary">
-    <h1>Summary</h1>
-    <p>I’m passionate about <strong>open web standards</strong>. I definitely love <strong>elegant & efficient</strong> web development and I am always looking to find new ways to improve processes.
- International <strong>community NodeJS</strong> leads me to study new means of developing website. <strong>Front-end web development</strong> as back-end web development are part of my skills.
-    <p>I also like <strong>educating</strong> other developpers on best practices.</p>
-    <p>Five year ago, I co-founded <strong>ProSVN</strong>, hosting source control solution, which is built and manage to reduce administration effort. I am also the <strong>creator</strong> and the <strong>administrator</strong> of a few websites.</p>
-</section>
-<section id="work-experience">
-	<h1>Work experience</h1>
-	<ol class="timeline">
-		<li>
-			<p class="date">2009–Present</p>
-			<p><strong>Softway Medical</strong> solution Architect, Front-end & Back-end engineer</p>
-			<p class="note">Developping solution to broadcast diagnostic results on the Cloud.</p>
-		</li>
-	        <li>
-			<p class="date">2007–2014</p>
-			<p>co-founder of <strong>ProSVN</strong> - collaborative source control hosting solution</p>
-			<p class="note">Subversion & Trac deployment solution</p>
-		</li>
-		<li>
-			<p class="date">2007–2008</p>
-			<p>Waid, solution architect for RIS / <strong>PACS</strong></p>
-			<p class="note">Picture archiving and communication system</p>
-		</li>
-		<li>
-			<p class="date">2002–2006</p>
-			<p><strong>Fuji-Medical</strong>, product lead on CR &amp; MG workstation • <a href="http://www.fujifilmmedical.fr/site/contenu.php?idniv1=9&idniv2=39">EyePix</a></p>
-			<p class="note">specialized in film Radiology production and in computed aided diagnostic for mammography</p>
-		</li>
-		<li>
-			<p class="date">2001–2002</p>
-			<p><strong>RealViz</strong>, software & research Engineer  • <a href="http://fr.wikipedia.org/wiki/Realviz">ReTimer</a></p>
-			<p class="note">Optical flow, 2D Tracking, topology change, local minimization, multi-threading Programming</p>
-		</li>
-	</ol>
-</section>
-<section id="education">
-	<h1>Education</h1>
-	<ol class="timeline">
-		<li>
-			<p class="date">2004–2007</p>
-			<p><strong>Project Management</strong> (skills for success), Software Quality assurance and test, Object and <strong>Unified Process</strong>, Java programming</p>
-			<p class="note">Learning Tree</p>
-		</li>
+      </ul>
+      <address>Aix en Provence, France</address>
+    </header>
+    <section id="summary">
+      <h1>Summary</h1>
+      <p>
+        I’m passionate about <strong>open web standards</strong>. I definitely
+        love <strong>elegant & efficient</strong> web development and I am
+        always looking to find new ways to improve processes. International
+        <strong>community NodeJS</strong> leads me to study new means of
+        developing website. <strong>Front-end web development</strong> as
+        back-end web development are part of my skills.
+      </p>
+
+      <p>
+        I also like <strong>educating</strong> other developpers on best
+        practices.
+      </p>
+      <p>
+        Five year ago, I co-founded <strong>ProSVN</strong>, hosting source
+        control solution, which is built and manage to reduce administration
+        effort. I am also the <strong>creator</strong> and the
+        <strong>administrator</strong> of a few websites.
+      </p>
+    </section>
+    <section id="work-experience">
+      <h1>Work experience</h1>
+      <ol class="timeline">
         <li>
-    		<p class="date">1998–2001</p>
-			<p>Advanced <strong>Engineering School</strong> specialized in Electronic & Optical Processes</p>
-			<p class="note">Master in Computer Science in Signal and Image Processing at Polytech Orleans University</p>
-		</li>
+          <p class="date">2017–Present</p>
+          <p>
+            <strong
+              ><a href="https://www.altair.com/aerospace/">Altair</a></strong
+            >
+            Lead developer front-end
+          </p>
+          <p class="note">
+            Developping solution to publish HPC computing in different cloud
+            provider (AWS, Google Cloud, Azure, ...).
+          </p>
+        </li>
         <li>
-        	<p class="date">1996-1998</p>
-			<p><strong>Science Program</strong> to prepare entry to French Engineering Schools</p>
-			<p class="note">Advanced Mathematics & Physics at Cergy-Pontoise University</p>
-		</li>
-	</ol>
-</section>
-<section id="technical-skills">
-    <h1>Technical skills</h1>
-    <h2>Front-end web development</h2>
-    <p>I have a broad understanding of the full Open Web Stack of technologies, including:</p>
-	<ul>
-		<li><strong>HTML5</strong> and related APIs</li>
-		<li>JavaScript (ECMAScript), the DOM and libraries like <strong>jQuery</strong></li>
-		<li>JS Framework (<strong>Backbone</strong>, <strong>AngularJS</strong>)</li>
-		<li>CSS (including <strong>CSS3</strong>)</li>
-	</ul>
-    <h2>Back-end web development</h2>
-    <p>I also have experience with a wide range of programming languages and technologies, including:</p>
-    <ul>
-      <li><strong>NodeJS</strong> and related Framework (Express, Meteor)</li>
-      <li>C++, Java, Python, PHP, C</li>
-      <li><strong>NoSQL</strong>, SQL</li>
-      <li>Shell and many more.</li>
-    </ul>
-    <p>I have experience with many server administration, including:</p>
-    <ul>
-      <li><strong>Debian</strong>, Ubuntu Server, RedHat, Gentoo, <strong>FreeBSD</strong></li>
-      <li>Apache2, nGinx, MySQL, Tomcat, Oracle, Subversion, Git</li>
-    </ul>
-</section>
-<section id="demos">
-    <h1>Selected projects</h1>
-	<ol class="timeline">
+          <p class="date">2014–2017</p>
+          <p>
+            <strong>Softway Medical</strong> solution Architect, Front-end &
+            Back-end engineer
+          </p>
+          <p class="note">
+            Developping solution to broadcast diagnostic results on the Cloud.
+          </p>
+        </li>
         <li>
-            <p class="date">November 2014</p>
-	    <p>Work on <a href="https://github.com/jfroffice/x-enterleave.js">x-enterleave.js</a> - HTML attribute to add CSS (enter / leave) classes.</p>
-	    <p class="note">Web-component inspiration with DOM Mutation Observers.</p>
-	</li>
+          <p class="date">2007–2014</p>
+          <p>
+            co-founder of <strong>ProSVN</strong> - collaborative source control
+            hosting solution
+          </p>
+          <p class="note">Subversion & Trac deployment solution</p>
+        </li>
         <li>
-            <p class="date">October 2014</p>
-	    <p>Work on <a href="https://github.com/grayghostvisuals/transformicons">Transformicons</a> Animated symbols and buttons packaged for Sass & CSS</p>
-	    <p class="note">Inspired by the article from Sara Soueidan and the work of Bennett Feely.</p>
-	</li>
+          <p class="date">2007–2008</p>
+          <p>Waid, solution architect for RIS / <strong>PACS</strong></p>
+          <p class="note">Picture archiving and communication system</p>
+        </li>
         <li>
-            <p class="date">April 2012</p>
-	    <p>Work on <a href="https://github.com/jfroffice/carddav-client">CardDAV</a> API to allow get CardDAV information from JS client</p>
-	    <p class="note">built and manage DaviCal server.</p>
-	</li>
+          <p class="date">2002–2006</p>
+          <p>
+            <strong>Fuji-Medical</strong>, product lead on CR &amp; MG
+            workstation •
+            <a
+              href="http://www.fujifilmmedical.fr/site/contenu.php?idniv1=9&idniv2=39"
+              >EyePix</a
+            >
+          </p>
+          <p class="note">
+            specialized in film Radiology production and in computed aided
+            diagnostic for mammography
+          </p>
+        </li>
         <li>
-        	<p class="date">Fev 2012</p>
-			<p>Report bugs on <a href="https://github.com/Modernizr/Modernizr/issues/513#issuecomment-4319760">Modernizr</a> - Geolocation causes memory leak in IE9</p>
-			<p class="note">detect HTML5 and CSS3 features.</p>
-		</li>
-		<li>
-			<p class="date">Jan 2012</p>
-			<p>Contribute to <a href="http://c9.io">Cloud9 Ide</a> - Development IDE on the cloud.</p>
-			<p class="note">add support to FreeBSD community.</p>
-		</li>
+          <p class="date">2001–2002</p>
+          <p>
+            <strong>RealViz</strong>, software & research Engineer •
+            <a href="http://fr.wikipedia.org/wiki/Realviz">ReTimer</a>
+          </p>
+          <p class="note">
+            Optical flow, 2D Tracking, topology change, local minimization,
+            multi-threading Programming
+          </p>
+        </li>
+      </ol>
+    </section>
+    <section id="education">
+      <h1>Education</h1>
+      <ol class="timeline">
         <li>
-        	<p class="date">Dev 2011</p>
-			<p>Translate  <a href="https://github.com/jfroffice/idiomatic.js">Idiomatic.js</a> to broad french JS community.</p>
-			<p class="note">JavaScript Best Practices community leading project.</p>
-		</li>
+          <p class="date">2004–2007</p>
+          <p>
+            <strong>Project Management</strong> (skills for success), Software
+            Quality assurance and test, Object and
+            <strong>Unified Process</strong>, Java programming
+          </p>
+          <p class="note">Learning Tree</p>
+        </li>
         <li>
-            <p class="date">Nov 2011</p>
-			<p>Create  <a href="https://github.com/jfroffice/sfupload">HTML5 File Upload API</a> to allow multiple file upload with progress notification.</p>
-			<p class="note">use File API HTML5 Specification.</p>
-		</li>
-	</ol>
-	<p>A lot more of my open source web applications and libraries can be found in <a href="https://github.com/jfroffice">my Github account</a>.
-</section>
-<section id="languages">
-	<h1>Languages</h1>
-	<ul>
-		<li><strong>French</strong>: Native</li>
-		<li><strong>English</strong>: Fluent (Warwick University 1999, University of Columbia, 2000)</li>
-	</ul>
-</section>
-<section id="interests">
-	<h1>Professional interests</h1>
-	<p>front-end web development,
-	  responsive design,
-   	web usability &amp; accessibility, 
-	graphic design
-    API design,
-    technical writing, 
-    back-end web development,
-	source control
-	</p>	
-</section>
-<footer>
-	<p>References are available upon request.</p>
-</footer>
-</body>
+          <p class="date">1998–2001</p>
+          <p>
+            Advanced <strong>Engineering School</strong> specialized in
+            Electronic & Optical Processes
+          </p>
+          <p class="note">
+            Master in Computer Science in Signal and Image Processing at
+            Polytech Orleans University
+          </p>
+        </li>
+        <li>
+          <p class="date">1996-1998</p>
+          <p>
+            <strong>Science Program</strong> to prepare entry to French
+            Engineering Schools
+          </p>
+          <p class="note">
+            Advanced Mathematics & Physics at Cergy-Pontoise University
+          </p>
+        </li>
+      </ol>
+    </section>
+    <section id="technical-skills">
+      <h1>Technical skills</h1>
+      <h2>Front-end web development</h2>
+      <p>
+        I have a broad understanding of the full Open Web Stack of technologies,
+        including:
+      </p>
+      <ul>
+        <li><strong>HTML5</strong> and related APIs</li>
+        <li>
+          ES6, JavaScript (ECMAScript), the DOM and libraries like
+          <strong>jQuery</strong>
+        </li>
+        <li>
+          JS Framework (<strong>React</strong>, Angular)
+        </li>
+        <li>CSS (including <strong>CSS3</strong>) and SAAS</li>
+      </ul>
+      <h2>Mobile development</h2>
+      <p>
+        I have a create a few app mobile app using
+        <strong>React-native</strong> framework for iOS.
+      </p>
+      <ul>
+        <li>User Login managemen t</li>
+        <li>
+          Calendar and agenda custom components
+        </li>
+        <li>
+          Geolocation app for hiking
+        </li>
+
+        <li></li>
+      </ul>
+      <h2>Back-end web development</h2>
+      <p>
+        I also have experience with a wide range of programming languages and
+        technologies, including:
+      </p>
+      <ul>
+        <li>
+          <strong>NodeJS</strong> and related Framework (Fastify, Express,
+          Meteor)
+        </li>
+        <li><strong>Jest</strong> and related Unit test Framework</li>
+        <li>
+          <strong>SauceLabs / Browserstack</strong> and related Test E2E
+          Selenium Framework
+        </li>
+        <li>C++, Java, Python, C</li>
+        <li><strong>NoSQL</strong>, SQL</li>
+        <li>Shell and many more.</li>
+      </ul>
+      <p>I have experience with many server administration, including:</p>
+      <ul>
+        <li>
+          <strong>K8S</strong>, K3S, <strong>Docker</strong>, RabbitMQ, Salt,
+          Apache2, NGinx, MySQL, Oracle, Git
+        </li>
+        <li>
+          <strong>Debian</strong>, Ubuntu Server, RedHat, Gentoo, FreeBSD.
+        </li>
+      </ul>
+    </section>
+    <section id="demos">
+      <h1>Selected projects</h1>
+      <ol class="timeline">
+        <li>
+          <p class="date">November 2014</p>
+          <p>
+            Work on
+            <a href="https://github.com/jfroffice/x-enterleave.js"
+              >x-enterleave.js</a
+            >
+            - HTML attribute to add CSS (enter / leave) classes.
+          </p>
+          <p class="note">
+            Web-component inspiration with DOM Mutation Observers.
+          </p>
+        </li>
+        <li>
+          <p class="date">October 2014</p>
+          <p>
+            Work on
+            <a href="https://github.com/jfroffice/transformicons"
+              >Transformicons</a
+            >
+            Animated symbols and buttons packaged for Sass & CSS
+          </p>
+          <p class="note">
+            Inspired by the article from Sara Soueidan and the work of Bennett
+            Feely.
+          </p>
+        </li>
+        <li>
+          <p class="date">April 2012</p>
+          <p>
+            Work on
+            <a href="https://github.com/jfroffice/carddav-client">CardDAV</a>
+            API to allow get CardDAV information from JS client
+          </p>
+          <p class="note">built and manage DaviCal server.</p>
+        </li>
+        <li>
+          <p class="date">Fev 2012</p>
+          <p>
+            Report bugs on
+            <a
+              href="https://github.com/Modernizr/Modernizr/issues/513#issuecomment-4319760"
+              >Modernizr</a
+            >
+            - Geolocation causes memory leak in IE9
+          </p>
+          <p class="note">detect HTML5 and CSS3 features.</p>
+        </li>
+        <li>
+          <p class="date">Jan 2012</p>
+          <p>
+            Contribute to <a href="http://c9.io">Cloud9 Ide</a> - Development
+            IDE on the cloud.
+          </p>
+          <p class="note">add support to FreeBSD community.</p>
+        </li>
+        <li>
+          <p class="date">Dev 2011</p>
+          <p>
+            Translate
+            <a href="https://github.com/jfroffice/idiomatic.js">Idiomatic.js</a>
+            to broad french JS community.
+          </p>
+          <p class="note">
+            JavaScript Best Practices community leading project.
+          </p>
+        </li>
+        <li>
+          <p class="date">Nov 2011</p>
+          <p>
+            Create
+            <a href="https://github.com/jfroffice/sfupload"
+              >HTML5 File Upload API</a
+            >
+            to allow multiple file upload with progress notification.
+          </p>
+          <p class="note">use File API HTML5 Specification.</p>
+        </li>
+      </ol>
+      <p>
+        A lot more of my open source web applications and libraries can be found
+        in <a href="https://github.com/jfroffice">my Github account</a>.
+      </p>
+    </section>
+    <section id="languages">
+      <h1>Languages</h1>
+      <ul>
+        <li><strong>French</strong>: Native</li>
+        <li>
+          <strong>English</strong>: Fluent (Warwick University 1999, University
+          of Columbia, 2000, till 2014 working an american company)
+        </li>
+      </ul>
+    </section>
+    <section id="interests">
+      <h1>Professional interests</h1>
+      <p>
+        front-end web development, responsive design, web usability &amp;
+        accessibility, graphic design API design, technical writing, back-end
+        web development, source control
+      </p>
+    </section>
+    <section id="interests">
+      <h1>Hobbies</h1>
+      <ul>
+        <li>
+          I used to practice the piano solo and in a group.
+        </li>
+        <li>
+          Scuba diving, I have been part of an association for 10 years since
+          teach the basics of diving.
+        </li>
+        <li>
+          Drawing, Sketching and painting.
+        </li>
+      </ul>
+    </section>
+    <footer>
+      <p>References are available upon request.</p>
+    </footer>
+  </body>
 </html>
